@@ -1,0 +1,1 @@
+This folder hosts the Javascript files that are needed for intergrating third party software

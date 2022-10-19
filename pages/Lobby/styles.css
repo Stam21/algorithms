@@ -1,0 +1,11 @@
+.width-button {
+    text-align:center !important;
+    float:none !important;
+    flex:1;
+  }
+  
+  @media (min-width: 768px) {
+    .row {
+      display:flex;  
+    } 
+  }
