@@ -35,4 +35,9 @@ export function NavMenu() {
         </Navbar>
       </div>
   );
-}
+};
+
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max + 1);
+};
