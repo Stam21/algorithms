@@ -12,7 +12,7 @@ let path = [];
 
 //heuristic we will be using - Manhattan distance
 //for other heuristics visit - https://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html
-function heuristic(position0, position1) {
+export function heuristic(position0, position1) {
   let d1 = Math.abs(position1.x - position0.x);
   let d2 = Math.abs(position1.y - position0.y);
 
@@ -76,10 +76,10 @@ export function search(Sx,Sy,Dx,Dy) {
             init();
             start = grid[Sx][Sy];
             end = grid[Dx][Dy];
-
             openSet.push(start);
 
             while (openSet.length > 0) {
+                console.log(grid[Dx][Dy]);
                 //assumption lowest index is the first one to begin with
                 let lowestIndex = 0;
                 for (let i = 0; i < openSet.length; i++) {
@@ -108,22 +108,25 @@ export function search(Sx,Sy,Dx,Dy) {
                 let neighbors = current.neighbors;
 
                 for (let i = 0; i < neighbors.length; i++) {
-                let neighbor = neighbors[i];
+                  let neighbor = neighbors[i];
 
-                if (!closedSet.includes(neighbor)) {
-                    let possibleG = current.g + 1;
+                  if (!closedSet.includes(neighbor)) {
+                      let possibleG = current.g + 1;
 
-                    if (!openSet.includes(neighbor)) {
-                    openSet.push(neighbor);
-                    } else if (possibleG >= neighbor.g) {
-                    continue;
-                    }
+                      if (!openSet.includes(neighbor)) {
+                      openSet.push(neighbor);
+                      } else if (possibleG >= neighbor.g) {
+                      continue;
+                      }
 
-                    neighbor.g = possibleG;
-                    neighbor.h = heuristic(neighbor, end);
-                    neighbor.f = neighbor.g + neighbor.h;
-                    neighbor.parent = current;
-                }
+                      neighbor.g = possibleG;
+                      
+                      
+                      neighbor.h = heuristic(neighbor, end);
+                      
+                      neighbor.f = neighbor.g + neighbor.h;
+                      neighbor.parent = current;
+                  }
                 }
             }
 }

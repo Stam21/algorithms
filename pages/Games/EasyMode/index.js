@@ -2,7 +2,7 @@
 import React from "react";
 import { Board }  from "../../../components/Board"
 
-export default function Easy() {
+const Easy = () => {
         
     
     //assigning ref
@@ -12,3 +12,5 @@ export default function Easy() {
             </div>
         )
 };
+
+export default Easy;
