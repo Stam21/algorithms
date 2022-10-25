@@ -5,8 +5,10 @@
     margin: 0px;
     background-color: cyan;
     animation: fadeIn 1s;
-    border-left: 1px solid rgba(0, 0, 0, 0.8);
-    border-right: 1px solid rgba(0, 0, 0, 0.8);
+    border-left: 4px solid rgba(0, 0, 0, 0.8);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+    border-top: 4px solid white;
+    border-right: 4px solid  white;
   }
   .twoo{
     width: 45px;
@@ -15,8 +17,10 @@
     background-color: red;
     margin: 0px;
     animation: fadeIn 1s;
-    border-left: 2px solid rgba(0, 0, 0, 0.8); 
-    border-top: 2px solid rgba(0, 0, 0, 0.8);
+    border-left: 4px solid rgba(0, 0, 0, 0.8);
+    border-right: 4px solid rgba(0, 0, 0, 0.8);
+    border-top: 4px solid white;
+    border-bottom: 4px solid  white;
   }
   .background-red {
     background-color: red;
@@ -32,7 +36,10 @@
     display: inline-block;
     margin: 0px;
     animation: fadeIn 1s;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+    border-left: 4px solid rgba(0, 0, 0, 0.8);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+    border-top: 4px solid rgba(0, 0, 0, 0.8);
+    border-right: 4px solid  white;
   }
   .twop{
     width: 45px;
@@ -41,7 +48,10 @@
     display: inline-block;
     margin: 0px;
     animation: fadeIn 1s;
-    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-left: 4px solid rgba(0, 0, 0, 0.8);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+    border-top: 4px solid rgba(0, 0, 0, 0.8);
+    border-right: 4px solid  white;
   }
 
   #boardInner{
@@ -54,7 +64,7 @@
   @keyframes fadeIn {
     0%{
       transform: rotateY(180deg);
-    } 100% {
+    } 40% {
      transform: rotateY(0deg);
     }
   }
